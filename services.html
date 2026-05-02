@@ -4,43 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services | Nexus Creative</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="services.css">
 </head>
-
 <body>
 
 <nav class="navbar">
     <div class="logo">NEXUS<span>.</span></div>
 
+    <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+
     <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html" class="btn-cta"style="color: azure;">Start a Project</a></li>
+        <li><a href="contact.html" class="btn-cta">Start a Project</a></li>
     </ul>
 
     <div class="nav-extras">
         <div class="search-box">
             <input type="text" placeholder="Search services...">
         </div>
-
         <div class="auth-btns">
             <a href="#" class="btn-login">Log in / Sign Up</a>
         </div>
     </div>
 </nav>
 
-
 <header class="services-hero">
     <h1>Our Specialized Services</h1>
 </header>
 
-
 <section class="services-grid-container" id="services-list">
+    <div class="service-card">
+        <span class="service-num">01</span>
+        <h2>Branding</h2>
+        <p>Crafting unique visual identities and brand strategies that resonate with your audience.</p>
+    </div>
+    <div class="service-card">
+        <span class="service-num">02</span>
+        <h2>Web Design</h2>
+        <p>Creating high-end, responsive, and user-centric digital experiences.</p>
+    </div>
+    <div class="service-card">
+        <span class="service-num">03</span>
+        <h2>Development</h2>
+        <p>Building scalable web applications with clean code and high performance.</p>
+    </div>
 </section>
 
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <div class="logo">NEXUS<span>.</span></div>
+            <p>Innovative digital solutions for bold ideas.</p>
+        </div>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <h4>Connect</h4>
+            <div class="social-icons">
+               <a href="www.linkedin.com/in/satyajit--roy">LinkedIn</a>
+                    <a href="https://www.instagram.com/satyajitan21.official?igsh=MW0wbmlkemc5ZWl1aA==">Instagram</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Nexus Creative Agency</p>
+    </div>
+</footer>
 
-<script type="module" src="script.js"></script>
+<script>
+    const menu = document.querySelector('#mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    menu.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        menu.classList.toggle('is-active');
+    });
+</script>
 
 </body>
 </html>

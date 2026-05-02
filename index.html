@@ -11,12 +11,20 @@
 
     <nav class="navbar">
         <div class="logo">NEXUS<span>.</span></div>
+        
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html" class="btn-cta"  style="color: azure;">Start a Project</a></li>
+            <li><a href="contact.html" class="btn-cta">Start a Project</a></li>
         </ul>
+        
         <div class="nav-extras">
             <div class="search-box">
                 <input type="text" placeholder="Search...">
@@ -47,9 +55,6 @@
                 <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Slack_Technologies_Logo.svg" alt="Slack">
-                <img src="https://tse3.mm.bing.net/th/id/OIP.9YEb6F1c4NazoL-rFSAhsQAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Partner 1">
-                <img src="https://cgec-ecell.netlify.app/static/media/logo.362a36180244093d9876.jpeg" alt="Partner 3">
-                <!-- Repeated for smooth loop -->
                 <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix">
@@ -127,7 +132,7 @@
                 <h4>Follow Us</h4>
                 <div class="social-icons">
                     <a href="www.linkedin.com/in/satyajit--roy">LinkedIn</a>
-                <a href="https://www.instagram.com/satyajitan21.official?igsh=MW0wbmlkemc5ZWl1aA==">Instagram</a>
+                    <a href="https://www.instagram.com/satyajitan21.official?igsh=MW0wbmlkemc5ZWl1aA==">Instagram</a>
                 </div>
             </div>
         </div>
@@ -136,5 +141,14 @@
         </div>
     </footer>
 
+    <script>
+        const menu = document.querySelector('#mobile-menu');
+        const menuLinks = document.querySelector('.nav-links');
+
+        menu.addEventListener('click', function() {
+            menuLinks.classList.toggle('active');
+            menu.classList.toggle('is-active');
+        });
+    </script>
 </body>
 </html>
