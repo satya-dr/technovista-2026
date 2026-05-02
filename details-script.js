@@ -2,15 +2,14 @@ import servicesData from './data/services.js';
 
 const contentArea = document.getElementById('service-content');
 
-// 1. URL theke ID khunje ber kora
+
 const urlParams = new URLSearchParams(window.location.search);
 const serviceId = urlParams.get('id');
 
-// 2. Data matching kora
 const service = servicesData.find(s => s.id === serviceId);
 
 if (service) {
-    // 3. UI-te data show kora
+ 
     contentArea.innerHTML = `
         <span class="badge">Service Details</span>
         <h1 style="font-size: 4.5rem; font-weight: 900;">${service.title}</h1>
